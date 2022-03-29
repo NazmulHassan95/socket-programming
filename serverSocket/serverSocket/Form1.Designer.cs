@@ -42,13 +42,13 @@
             // textBoxDisplay
             // 
             this.textBoxDisplay.AcceptsReturn = true;
-            this.textBoxDisplay.Location = new System.Drawing.Point(15, 165);
+            this.textBoxDisplay.Location = new System.Drawing.Point(15, 226);
             this.textBoxDisplay.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxDisplay.Multiline = true;
             this.textBoxDisplay.Name = "textBoxDisplay";
             this.textBoxDisplay.ReadOnly = true;
             this.textBoxDisplay.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxDisplay.Size = new System.Drawing.Size(516, 171);
+            this.textBoxDisplay.Size = new System.Drawing.Size(610, 171);
             this.textBoxDisplay.TabIndex = 0;
             this.textBoxDisplay.TextChanged += new System.EventHandler(this.textBoxDisplay_TextChanged);
             // 
@@ -56,7 +56,7 @@
             // 
             this.lableServerPort.AutoSize = true;
             this.lableServerPort.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lableServerPort.Location = new System.Drawing.Point(268, 15);
+            this.lableServerPort.Location = new System.Drawing.Point(362, 31);
             this.lableServerPort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lableServerPort.Name = "lableServerPort";
             this.lableServerPort.Size = new System.Drawing.Size(107, 19);
@@ -67,10 +67,10 @@
             // buttonService
             // 
             this.buttonService.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonService.Location = new System.Drawing.Point(198, 49);
+            this.buttonService.Location = new System.Drawing.Point(239, 86);
             this.buttonService.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonService.Name = "buttonService";
-            this.buttonService.Size = new System.Drawing.Size(143, 29);
+            this.buttonService.Size = new System.Drawing.Size(180, 39);
             this.buttonService.TabIndex = 2;
             this.buttonService.Text = "Start Listening";
             this.buttonService.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             // textBoxPort
             // 
             this.textBoxPort.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPort.Location = new System.Drawing.Point(379, 12);
+            this.textBoxPort.Location = new System.Drawing.Point(473, 28);
             this.textBoxPort.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxPort.Name = "textBoxPort";
             this.textBoxPort.Size = new System.Drawing.Size(152, 26);
@@ -89,18 +89,18 @@
             // 
             this.labelServerIP.AutoSize = true;
             this.labelServerIP.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelServerIP.Location = new System.Drawing.Point(25, 19);
+            this.labelServerIP.Location = new System.Drawing.Point(11, 28);
             this.labelServerIP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelServerIP.Name = "labelServerIP";
-            this.labelServerIP.Size = new System.Drawing.Size(22, 19);
+            this.labelServerIP.Size = new System.Drawing.Size(88, 19);
             this.labelServerIP.TabIndex = 4;
-            this.labelServerIP.Text = "IP";
+            this.labelServerIP.Text = "IP Address: ";
             // 
             // labelIP
             // 
             this.labelIP.AutoSize = true;
             this.labelIP.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIP.Location = new System.Drawing.Point(51, 19);
+            this.labelIP.Location = new System.Drawing.Point(103, 28);
             this.labelIP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIP.Name = "labelIP";
             this.labelIP.Size = new System.Drawing.Size(53, 19);
@@ -109,20 +109,20 @@
             // 
             // textBoxSend
             // 
-            this.textBoxSend.Location = new System.Drawing.Point(15, 95);
+            this.textBoxSend.Location = new System.Drawing.Point(15, 145);
             this.textBoxSend.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxSend.Multiline = true;
             this.textBoxSend.Name = "textBoxSend";
-            this.textBoxSend.Size = new System.Drawing.Size(360, 26);
+            this.textBoxSend.Size = new System.Drawing.Size(345, 26);
             this.textBoxSend.TabIndex = 9;
             // 
             // buttonSend
             // 
             this.buttonSend.Font = new System.Drawing.Font("Calibri", 12F);
-            this.buttonSend.Location = new System.Drawing.Point(379, 95);
+            this.buttonSend.Location = new System.Drawing.Point(366, 145);
             this.buttonSend.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonSend.Name = "buttonSend";
-            this.buttonSend.Size = new System.Drawing.Size(152, 26);
+            this.buttonSend.Size = new System.Drawing.Size(259, 26);
             this.buttonSend.TabIndex = 10;
             this.buttonSend.Text = "Send Message";
             this.buttonSend.UseVisualStyleBackColor = true;
@@ -131,10 +131,10 @@
             // buttonFile
             // 
             this.buttonFile.Font = new System.Drawing.Font("Calibri", 12F);
-            this.buttonFile.Location = new System.Drawing.Point(15, 127);
+            this.buttonFile.Location = new System.Drawing.Point(15, 177);
             this.buttonFile.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonFile.Name = "buttonFile";
-            this.buttonFile.Size = new System.Drawing.Size(253, 32);
+            this.buttonFile.Size = new System.Drawing.Size(297, 32);
             this.buttonFile.TabIndex = 12;
             this.buttonFile.Text = "Send File";
             this.buttonFile.UseVisualStyleBackColor = true;
@@ -143,10 +143,10 @@
             // buttonClose
             // 
             this.buttonClose.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(272, 127);
+            this.buttonClose.Location = new System.Drawing.Point(328, 177);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(259, 32);
+            this.buttonClose.Size = new System.Drawing.Size(297, 32);
             this.buttonClose.TabIndex = 13;
             this.buttonClose.Text = "Close Connection";
             this.buttonClose.UseVisualStyleBackColor = true;
@@ -157,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
-            this.ClientSize = new System.Drawing.Size(542, 350);
+            this.ClientSize = new System.Drawing.Size(636, 409);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonFile);
             this.Controls.Add(this.buttonSend);

@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Text;
-using System.Windows.Forms;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 using System.Threading;
-using System.IO;
+using System.Windows.Forms;
 
 namespace clientSocket
 {

@@ -14,10 +14,12 @@ namespace serverSocket
         List<Socket> ClientSocketsList = new List<Socket>();
         public Server()
         {
+            #region Server initiate with component
             InitializeComponent();
             string IPaddress = GetLocalIP();
             textBoxDisplay.AppendText(string.Format("The server's IP is {0}", IPaddress));
             labelIP.Text = IPaddress;
+            #endregion
         }
 
         private void buttonService_Click(object sender, EventArgs e)

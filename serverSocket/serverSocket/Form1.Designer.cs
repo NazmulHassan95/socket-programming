@@ -67,7 +67,7 @@
             // buttonService
             // 
             this.buttonService.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonService.Location = new System.Drawing.Point(239, 86);
+            this.buttonService.Location = new System.Drawing.Point(224, 76);
             this.buttonService.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonService.Name = "buttonService";
             this.buttonService.Size = new System.Drawing.Size(180, 39);

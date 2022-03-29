@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace serverSocket
@@ -14,9 +11,13 @@ namespace serverSocket
         [STAThread]
         static void Main()
         {
+            #region Run program
+            //Run styles
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Run Application
             Application.Run(new Server());
+            #endregion
         }
     }
 }

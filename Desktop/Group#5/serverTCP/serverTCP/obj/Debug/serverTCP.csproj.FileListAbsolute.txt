@@ -1,0 +1,20 @@
+C:\Users\rezaeimm2\source\repos\serverTCP\serverTCP\bin\Debug\serverTCP.exe.config
+C:\Users\rezaeimm2\source\repos\serverTCP\serverTCP\bin\Debug\serverTCP.exe
+C:\Users\rezaeimm2\source\repos\serverTCP\serverTCP\bin\Debug\serverTCP.pdb
+C:\Users\rezaeimm2\source\repos\serverTCP\serverTCP\obj\Debug\serverTCP.csprojResolveAssemblyReference.cache
+C:\Users\rezaeimm2\source\repos\serverTCP\serverTCP\obj\Debug\serverTCP.Server.resources
+C:\Users\rezaeimm2\source\repos\serverTCP\serverTCP\obj\Debug\serverTCP.Properties.Resources.resources
+C:\Users\rezaeimm2\source\repos\serverTCP\serverTCP\obj\Debug\serverTCP.csproj.GenerateResource.cache
+C:\Users\rezaeimm2\source\repos\serverTCP\serverTCP\obj\Debug\serverTCP.csproj.CoreCompileInputs.cache
+C:\Users\rezaeimm2\source\repos\serverTCP\serverTCP\obj\Debug\serverTCP.exe
+C:\Users\rezaeimm2\source\repos\serverTCP\serverTCP\obj\Debug\serverTCP.pdb
+E:\Mostafa\آموزش ها\src\serverTCP\serverTCP\bin\Debug\serverTCP.exe.config
+E:\Mostafa\آموزش ها\src\serverTCP\serverTCP\bin\Debug\serverTCP.exe
+E:\Mostafa\آموزش ها\src\serverTCP\serverTCP\bin\Debug\serverTCP.pdb
+E:\Mostafa\آموزش ها\src\serverTCP\serverTCP\obj\Debug\serverTCP.Server.resources
+E:\Mostafa\آموزش ها\src\serverTCP\serverTCP\obj\Debug\serverTCP.Properties.Resources.resources
+E:\Mostafa\آموزش ها\src\serverTCP\serverTCP\obj\Debug\serverTCP.csproj.GenerateResource.cache
+E:\Mostafa\آموزش ها\src\serverTCP\serverTCP\obj\Debug\serverTCP.csproj.CoreCompileInputs.cache
+E:\Mostafa\آموزش ها\src\serverTCP\serverTCP\obj\Debug\serverTCP.exe
+E:\Mostafa\آموزش ها\src\serverTCP\serverTCP\obj\Debug\serverTCP.pdb
+E:\Mostafa\آموزش ها\src\serverTCP\serverTCP\obj\Debug\serverTCP.csproj.AssemblyReference.cache

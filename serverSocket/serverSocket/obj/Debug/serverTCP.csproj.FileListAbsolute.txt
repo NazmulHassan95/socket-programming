@@ -1,0 +1,20 @@
+C:\Users\rezaeimm2\source\repos\serverSocket\serverSocket\bin\Debug\serverSocket.exe.config
+C:\Users\rezaeimm2\source\repos\serverSocket\serverSocket\bin\Debug\serverSocket.exe
+C:\Users\rezaeimm2\source\repos\serverSocket\serverSocket\bin\Debug\serverSocket.pdb
+C:\Users\rezaeimm2\source\repos\serverSocket\serverSocket\obj\Debug\serverSocket.csprojResolveAssemblyReference.cache
+C:\Users\rezaeimm2\source\repos\serverSocket\serverSocket\obj\Debug\serverSocket.Server.resources
+C:\Users\rezaeimm2\source\repos\serverSocket\serverSocket\obj\Debug\serverSocket.Properties.Resources.resources
+C:\Users\rezaeimm2\source\repos\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.GenerateResource.cache
+C:\Users\rezaeimm2\source\repos\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.CoreCompileInputs.cache
+C:\Users\rezaeimm2\source\repos\serverSocket\serverSocket\obj\Debug\serverSocket.exe
+C:\Users\rezaeimm2\source\repos\serverSocket\serverSocket\obj\Debug\serverSocket.pdb
+E:\Mostafa\آموزش ها\src\serverSocket\serverSocket\bin\Debug\serverSocket.exe.config
+E:\Mostafa\آموزش ها\src\serverSocket\serverSocket\bin\Debug\serverSocket.exe
+E:\Mostafa\آموزش ها\src\serverSocket\serverSocket\bin\Debug\serverSocket.pdb
+E:\Mostafa\آموزش ها\src\serverSocket\serverSocket\obj\Debug\serverSocket.Server.resources
+E:\Mostafa\آموزش ها\src\serverSocket\serverSocket\obj\Debug\serverSocket.Properties.Resources.resources
+E:\Mostafa\آموزش ها\src\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.GenerateResource.cache
+E:\Mostafa\آموزش ها\src\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.CoreCompileInputs.cache
+E:\Mostafa\آموزش ها\src\serverSocket\serverSocket\obj\Debug\serverSocket.exe
+E:\Mostafa\آموزش ها\src\serverSocket\serverSocket\obj\Debug\serverSocket.pdb
+E:\Mostafa\آموزش ها\src\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.AssemblyReference.cache

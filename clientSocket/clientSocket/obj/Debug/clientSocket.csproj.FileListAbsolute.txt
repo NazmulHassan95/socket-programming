@@ -1,0 +1,11 @@
+C:\Users\User\Source\Repos\socket-programming\clientSocket\clientSocket\obj\Debug\clientSocket.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\socket-programming\clientSocket\clientSocket\obj\Debug\clientSocket.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\socket-programming\clientSocket\clientSocket\obj\Debug\clientSocket.Form1.resources
+C:\Users\User\Source\Repos\socket-programming\clientSocket\clientSocket\obj\Debug\clientSocket.Properties.Resources.resources
+C:\Users\User\Source\Repos\socket-programming\clientSocket\clientSocket\obj\Debug\clientSocket.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\socket-programming\clientSocket\clientSocket\obj\Debug\clientSocket.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\socket-programming\clientSocket\clientSocket\obj\Debug\clientSocket.exe
+C:\Users\User\Source\Repos\socket-programming\clientSocket\clientSocket\obj\Debug\clientSocket.pdb
+C:\Users\User\source\repos\socket-programming\clientSocket\clientSocket\bin\Debug\clientSocket.exe.config
+C:\Users\User\source\repos\socket-programming\clientSocket\clientSocket\bin\Debug\clientSocket.exe
+C:\Users\User\source\repos\socket-programming\clientSocket\clientSocket\bin\Debug\clientSocket.pdb

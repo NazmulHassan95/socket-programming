@@ -1,0 +1,20 @@
+C:\Users\rezaeimm2\source\repos\clientSocket\clientSocket\bin\Debug\clientSocket.exe.config
+C:\Users\rezaeimm2\source\repos\clientSocket\clientSocket\bin\Debug\clientSocket.exe
+C:\Users\rezaeimm2\source\repos\clientSocket\clientSocket\bin\Debug\clientSocket.pdb
+C:\Users\rezaeimm2\source\repos\clientSocket\clientSocket\obj\Debug\clientSocket.csprojResolveAssemblyReference.cache
+C:\Users\rezaeimm2\source\repos\clientSocket\clientSocket\obj\Debug\clientSocket.Form1.resources
+C:\Users\rezaeimm2\source\repos\clientSocket\clientSocket\obj\Debug\clientSocket.Properties.Resources.resources
+C:\Users\rezaeimm2\source\repos\clientSocket\clientSocket\obj\Debug\clientSocket.csproj.GenerateResource.cache
+C:\Users\rezaeimm2\source\repos\clientSocket\clientSocket\obj\Debug\clientSocket.csproj.CoreCompileInputs.cache
+C:\Users\rezaeimm2\source\repos\clientSocket\clientSocket\obj\Debug\clientSocket.exe
+C:\Users\rezaeimm2\source\repos\clientSocket\clientSocket\obj\Debug\clientSocket.pdb
+E:\Mostafa\آموزش ها\src\clientSocket\clientSocket\bin\Debug\clientSocket.exe.config
+E:\Mostafa\آموزش ها\src\clientSocket\clientSocket\bin\Debug\clientSocket.exe
+E:\Mostafa\آموزش ها\src\clientSocket\clientSocket\bin\Debug\clientSocket.pdb
+E:\Mostafa\آموزش ها\src\clientSocket\clientSocket\obj\Debug\clientSocket.csproj.AssemblyReference.cache
+E:\Mostafa\آموزش ها\src\clientSocket\clientSocket\obj\Debug\clientSocket.Form1.resources
+E:\Mostafa\آموزش ها\src\clientSocket\clientSocket\obj\Debug\clientSocket.Properties.Resources.resources
+E:\Mostafa\آموزش ها\src\clientSocket\clientSocket\obj\Debug\clientSocket.csproj.GenerateResource.cache
+E:\Mostafa\آموزش ها\src\clientSocket\clientSocket\obj\Debug\clientSocket.csproj.CoreCompileInputs.cache
+E:\Mostafa\آموزش ها\src\clientSocket\clientSocket\obj\Debug\clientSocket.exe
+E:\Mostafa\آموزش ها\src\clientSocket\clientSocket\obj\Debug\clientSocket.pdb

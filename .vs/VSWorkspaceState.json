@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\clientTCP",
-    "\\clientTCP\\clientTCP"
+    ""
   ],
-  "SelectedNode": "\\clientTCP\\clientTCP\\Form1.resx",
+  "SelectedNode": "\\serverTCP.sln",
   "PreviewInSolutionExplorer": false
 }

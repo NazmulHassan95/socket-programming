@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\bin\Debug\serverSocket.exe.config
+C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\bin\Debug\serverSocket.exe
+C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\bin\Debug\serverSocket.pdb
+C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\obj\Debug\serverSocket.Server.resources
+C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\obj\Debug\serverSocket.Properties.Resources.resources
+C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.GenerateResource.cache
+C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\obj\Debug\serverSocket.exe
+C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\obj\Debug\serverSocket.pdb

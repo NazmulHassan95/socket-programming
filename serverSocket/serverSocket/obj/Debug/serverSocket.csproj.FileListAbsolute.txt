@@ -9,3 +9,13 @@ C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\obj\Debu
 C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\obj\Debug\serverSocket.exe
 C:\Users\User\source\repos\socket-programming\serverSocket\serverSocket\obj\Debug\serverSocket.pdb
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\serverSocket\serverSocket\bin\Debug\serverSocket.exe.config
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\serverSocket\serverSocket\bin\Debug\serverSocket.exe
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\serverSocket\serverSocket\bin\Debug\serverSocket.pdb
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.AssemblyReference.cache
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\serverSocket\serverSocket\obj\Debug\serverSocket.Server.resources
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\serverSocket\serverSocket\obj\Debug\serverSocket.Properties.Resources.resources
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.GenerateResource.cache
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\serverSocket\serverSocket\obj\Debug\serverSocket.csproj.CoreCompileInputs.cache
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\serverSocket\serverSocket\obj\Debug\serverSocket.exe
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\serverSocket\serverSocket\obj\Debug\serverSocket.pdb

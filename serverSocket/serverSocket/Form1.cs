@@ -11,90 +11,91 @@ namespace serverSocket
 {
     public partial class Server : Form
     {
-        List<Socket> ClientSocketsList = new List<Socket>();
+        List<Socket> ClientSockets = new List<Socket>();
         public Server()
         {
-            #region Server initiate with component
             InitializeComponent();
-            string IPaddress = GetLocalIP();
-            textBoxDisplay.AppendText(string.Format("The server's IP is {0}", IPaddress));
-            labelIP.Text = IPaddress;
-            #endregion
+            string IPaddress = ServerIPAddress();
+            DisplayMessagesTextBox.AppendText(string.Format("The server's IP is {0}", IPaddress));
+            IPAddLable.Text = IPaddress;
         }
-
+        
+        //listen for client to connect to server
         private void buttonService_Click(object sender, EventArgs e)
         {
-            //A socket object is created
+            //a socket object is created
             Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream,ProtocolType.Tcp);
 
-            //A port is assigned
-            socket.Bind(new IPEndPoint(IPAddress.Parse(labelIP.Text), int.Parse(textBoxPort.Text)));
+            //a port is assigned
+            socket.Bind(new IPEndPoint(IPAddress.Parse(IPAddLable.Text), int.Parse(PortOfServerTextBox.Text)));
 
-            //Start listening for 1 client to connect
+            //start listening for a client to connect
             socket.Listen(1);
-            textBoxDisplay.AppendText("\r\nstart linstening...");
+            DisplayMessagesTextBox.AppendText("\r\nstart linstening...");
 
-            //Accept the cilent's require
-            ThreadPool.QueueUserWorkItem(new WaitCallback(this.AcceptClientConnect),socket);
+            //accept the cilent's require
+            ThreadPool.QueueUserWorkItem(new WaitCallback(this.AcceptConnectionRequestFromClient),socket);
         }
-
-        public void AcceptClientConnect(object socket)
+        
+        //accept the request from client and show the message about that
+        public void AcceptConnectionRequestFromClient(object socket)
         {
             var serverSocket = socket as Socket;
-
-                var proxSocket = serverSocket.Accept();
-                this.appendTextToLog(string.Format("\r\nThe client {0} is connected", proxSocket.RemoteEndPoint.ToString()));
-                ClientSocketsList.Add(proxSocket);
-
-                //keep receving client's message
-                ThreadPool.QueueUserWorkItem(new WaitCallback(this.receiveClientData),proxSocket);
+            var proxSocket = serverSocket.Accept();
+            this.AddMessagetoLog(string.Format("\r\nThe client {0} is connected", proxSocket.RemoteEndPoint.ToString()));
+            ClientSockets.Add(proxSocket);
+            
+            //keep receving client's message
+            ThreadPool.QueueUserWorkItem(new WaitCallback(this.AcceptDataFromClient),proxSocket);
         }
-
-        public void receiveClientData(object socket)
+        
+        //analys the message and decide to accept it or not
+        public void AcceptDataFromClient(object socket)
         {
-            var proxSocket = socket as Socket;
-            byte[] data = new byte[1024 * 1024]; // Maximum of text message is 1MB!
+            var SocketForProxy = socket as Socket;
+            byte[] TransmissionData = new byte[1024 * 1024];
             while(true)
             {
                 int length = 0;
                 try
                 {
-                    length = proxSocket.Receive(data, 0, data.Length, SocketFlags.None);
+                    length = SocketForProxy.Receive(TransmissionData, 0, TransmissionData.Length, SocketFlags.None);
                 }
                 catch(Exception)
                 {
                     //not normal quit
-                    this.appendTextToLog(string.Format("\r\n {0} Abnormally quits!", proxSocket.RemoteEndPoint.ToString()));
-                    ClientSocketsList.Remove(proxSocket);
-                    stopConnect(proxSocket);
+                    this.AddMessagetoLog(string.Format("\r\n {0} quits suddenly!", SocketForProxy.RemoteEndPoint.ToString()));
+                    ClientSockets.Remove(SocketForProxy);
+                    stopConnect(SocketForProxy);
                     return; //end this thread
                 }
 
-                //display the receieved data into the textBox
+                //display the receieved TransmissionData into the textBox
                 if(length <= 0)
                 {
                     //the client quits
-                    this.appendTextToLog(string.Format("\r\n{0} normally quits!\n", proxSocket.RemoteEndPoint.ToString()));
-                    ClientSocketsList.Remove(proxSocket);
-                    stopConnect(proxSocket);
+                    this.AddMessagetoLog(string.Format("\r\n{0} normally quits.\n", SocketForProxy.RemoteEndPoint.ToString()));
+                    ClientSockets.Remove(SocketForProxy);
+                    stopConnect(SocketForProxy);
                     return; //end this thread
                 }
 
-                string receivedData = Encoding.Default.GetString(data, 0, length);
-                this.appendTextToLog(string.Format("\r\nRecived massage from: {0}  {1}", proxSocket.RemoteEndPoint.ToString(),
+                string receivedData = Encoding.Default.GetString(TransmissionData, 0, length);
+                this.AddMessagetoLog(string.Format("\r\nRecived massage from: {0}  {1}", SocketForProxy.RemoteEndPoint.ToString(),
                     receivedData));
             }
         }
-
+        
+        //end the connection between server and client
         public void stopConnect(object socket)
         {
-            var proxSocket = socket as Socket;
+            var SocketProxyValue = socket as Socket;
             try
             {
-                if (proxSocket.Connected)
+                if (SocketProxyValue.Connected)
                 {
-                    proxSocket.Shutdown(SocketShutdown.Both);
-                    proxSocket.Close(10);
+                    SocketProxyValue.Shutdown(SocketShutdown.Both);
+                    SocketProxyValue.Close(10);
                 }
             }
             catch (Exception ex)
@@ -103,22 +104,23 @@ namespace serverSocket
             }
         }
 
-        public void appendTextToLog(string text)
+        //it adds the new logs to the end of current log and show as me message
+        public void AddMessagetoLog(string text)
         {
-            if(textBoxDisplay.InvokeRequired)
+            if(DisplayMessagesTextBox.InvokeRequired)
             {
-                textBoxDisplay.Invoke(new Action<string>(s => {
-                    textBoxDisplay.AppendText(s);
-                    ///textBoxDisplay.Text = string.Format("{0}\r\n{1}", s, textBoxDisplay.Text);
+                DisplayMessagesTextBox.Invoke(new Action<string>(s => {
+                    DisplayMessagesTextBox.AppendText(s);
                 }), text);
             }
             else
             {
-                textBoxDisplay.AppendText(text);
+                DisplayMessagesTextBox.AppendText(text);
             }
         }
 
-        public string GetLocalIP()
+        //IP address is very important in any connection types
+        public string ServerIPAddress()
         {
             try
             {
@@ -126,7 +128,7 @@ namespace serverSocket
                 IPHostEntry IpEntry = Dns.GetHostEntry(HostName);
                 for (int i = 0; i < IpEntry.AddressList.Length; i++)
                 {
-                    //IPv4 type labelServerIP addresses is used.
+                    //IPv4 type IPAddressofServer addresses is used.
                     //AddressFamily.InterNetwork represents IPv4 (while AddressFamily.InterNetworkV6 represents IPv6)
                     if (IpEntry.AddressList[i].AddressFamily == AddressFamily.InterNetwork)
                     {
@@ -142,25 +144,27 @@ namespace serverSocket
             }
         }
 
-        private void buttonSend_Click(object sender, EventArgs e)
+        //send message to the connected client
+        private void ClickSend(object sender, EventArgs e)
         {
-            foreach(var proxSocket in ClientSocketsList)
+            foreach(var proxSocket in ClientSockets)
             {
                 if(proxSocket.Connected)
                 {
-                    byte[] data1 = Encoding.Default.GetBytes(textBoxSend.Text.ToString());
-                    textBoxDisplay.AppendText(string.Format("\r\nMessage sent: {0}",textBoxSend.Text));
-                    byte[] final = new byte[data1.Length + 1];
+                    byte[] TransmissionData = Encoding.Default.GetBytes(SendingMessageTextBox.Text.ToString());
+                    DisplayMessagesTextBox.AppendText(string.Format("\r\nMessage sent: {0}",SendingMessageTextBox.Text));
+                    byte[] final = new byte[TransmissionData.Length + 1];
                     final[0] = 1;
-                    Buffer.BlockCopy(data1, 0, final, 1, data1.Length);
+                    Buffer.BlockCopy(TransmissionData, 0, final, 1, TransmissionData.Length);
                     proxSocket.Send(final, 0, final.Length,SocketFlags.None);
                 }
             }
         }
 
-        private void buttonFlash_Click(object sender, EventArgs e)
+        //server peeks for incomming messages
+        private void FlashSend(object sender, EventArgs e)
         {
-            foreach (var proxSocket in ClientSocketsList)
+            foreach (var proxSocket in ClientSockets)
             {
                 if (proxSocket.Connected)
                 {
@@ -168,10 +172,11 @@ namespace serverSocket
                 }
             }
         }
-
-        private void buttonFile_Click(object sender, EventArgs e)
+        
+        //send a file to client
+        private void SendAFileToClient(object sender, EventArgs e)
         {
-            //1. select a file
+            //select a file
             using (OpenFileDialog file = new OpenFileDialog())
             {
                 if (file.ShowDialog() != DialogResult.OK)
@@ -182,7 +187,7 @@ namespace serverSocket
                 final[0] = 2;
                 Buffer.BlockCopy(fileData, 0, final, 1, fileData.Length);
 
-                foreach (var proxSocket in ClientSocketsList)
+                foreach (var proxSocket in ClientSockets)
                 {
                     if (proxSocket.Connected)
                     {
@@ -192,29 +197,5 @@ namespace serverSocket
 
             }
         }
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Server_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxDisplay_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lableServerPort_Click(object sender, EventArgs e)
-        {
-
-        }
-        //private void buttonClose_Click(object sender, object socket, EventArgs e)
-        //{
-        //    var proxSocket = socket as Socket;
-        //    stopConnect(proxSocket);
-        //}
     }
 }

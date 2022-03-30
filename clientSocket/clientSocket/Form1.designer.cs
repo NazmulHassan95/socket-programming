@@ -2,15 +2,10 @@
 {
     partial class Form1
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
+        // Required designer variable
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        // Clean up any resources being used.
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,138 +16,125 @@
         }
 
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
+        // Required method for Designer support - do not modify the contents of this method with the code editor.
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.labelServerIP = new System.Windows.Forms.Label();
-            this.textBoxIP = new System.Windows.Forms.TextBox();
-            this.textBoxPort = new System.Windows.Forms.TextBox();
-            this.lableServerPort = new System.Windows.Forms.Label();
-            this.buttonConnect = new System.Windows.Forms.Button();
-            this.textBoxDisplay = new System.Windows.Forms.TextBox();
-            this.textBoxSend = new System.Windows.Forms.TextBox();
-            this.buttonSend = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
+            this.IpServerAddLable = new System.Windows.Forms.Label();
+            this.IpAddTextBox = new System.Windows.Forms.TextBox();
+            this.PortToConnectTextBox = new System.Windows.Forms.TextBox();
+            this.PortOfServerLabel = new System.Windows.Forms.Label();
+            this.ClickConnectButton = new System.Windows.Forms.Button();
+            this.DisplayMsgBoxText = new System.Windows.Forms.TextBox();
+            this.SendMsgToServerBoxText = new System.Windows.Forms.TextBox();
+            this.ClickToSendButton = new System.Windows.Forms.Button();
+            this.CLoseTheFormButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // labelServerIP
-            // 
-            this.labelServerIP.AutoSize = true;
-            this.labelServerIP.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelServerIP.Location = new System.Drawing.Point(11, 26);
-            this.labelServerIP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelServerIP.Name = "labelServerIP";
-            this.labelServerIP.Size = new System.Drawing.Size(80, 19);
-            this.labelServerIP.TabIndex = 0;
-            this.labelServerIP.Text = "Server\'s IP";
-            // 
-            // textBoxIP
-            // 
-            this.textBoxIP.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxIP.Location = new System.Drawing.Point(95, 24);
-            this.textBoxIP.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBoxIP.Name = "textBoxIP";
-            this.textBoxIP.Size = new System.Drawing.Size(272, 26);
-            this.textBoxIP.TabIndex = 1;
-            // 
-            // textBoxPort
-            // 
-            this.textBoxPort.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxPort.Location = new System.Drawing.Point(485, 24);
-            this.textBoxPort.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBoxPort.Name = "textBoxPort";
-            this.textBoxPort.Size = new System.Drawing.Size(139, 26);
-            this.textBoxPort.TabIndex = 3;
-            // 
-            // lableServerPort
-            // 
-            this.lableServerPort.AutoSize = true;
-            this.lableServerPort.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lableServerPort.Location = new System.Drawing.Point(384, 26);
-            this.lableServerPort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lableServerPort.Name = "lableServerPort";
-            this.lableServerPort.Size = new System.Drawing.Size(97, 19);
-            this.lableServerPort.TabIndex = 2;
-            this.lableServerPort.Text = "Server\'s Port";
-            // 
-            // buttonConnect
-            // 
-            this.buttonConnect.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonConnect.Location = new System.Drawing.Point(245, 71);
-            this.buttonConnect.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(172, 30);
-            this.buttonConnect.TabIndex = 4;
-            this.buttonConnect.Text = "Connect to this server";
-            this.buttonConnect.UseVisualStyleBackColor = true;
-            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
-            // 
-            // textBoxDisplay
-            // 
-            this.textBoxDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxDisplay.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDisplay.Location = new System.Drawing.Point(11, 237);
-            this.textBoxDisplay.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBoxDisplay.Multiline = true;
-            this.textBoxDisplay.Name = "textBoxDisplay";
-            this.textBoxDisplay.ReadOnly = true;
-            this.textBoxDisplay.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxDisplay.Size = new System.Drawing.Size(613, 163);
-            this.textBoxDisplay.TabIndex = 5;
-            // 
-            // textBoxSend
-            // 
-            this.textBoxSend.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSend.Location = new System.Drawing.Point(11, 138);
-            this.textBoxSend.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBoxSend.Multiline = true;
-            this.textBoxSend.Name = "textBoxSend";
-            this.textBoxSend.Size = new System.Drawing.Size(356, 25);
-            this.textBoxSend.TabIndex = 6;
-            // 
-            // buttonSend
-            // 
-            this.buttonSend.Font = new System.Drawing.Font("Calibri", 12F);
-            this.buttonSend.Location = new System.Drawing.Point(375, 137);
-            this.buttonSend.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.buttonSend.Name = "buttonSend";
-            this.buttonSend.Size = new System.Drawing.Size(249, 26);
-            this.buttonSend.TabIndex = 7;
-            this.buttonSend.Text = "Send Message to Server";
-            this.buttonSend.UseVisualStyleBackColor = true;
-            this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(245, 181);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(158, 40);
-            this.buttonClose.TabIndex = 8;
-            this.buttonClose.Text = "Close Connection";
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
+
+            // IpServerAddLable
+            this.IpServerAddLable.AutoSize = true;
+            this.IpServerAddLable.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IpServerAddLable.Location = new System.Drawing.Point(11, 26);
+            this.IpServerAddLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.IpServerAddLable.Name = "IpServerAddLable";
+            this.IpServerAddLable.Size = new System.Drawing.Size(80, 19);
+            this.IpServerAddLable.TabIndex = 0;
+            this.IpServerAddLable.Text = "Server\'s IP";
+
+            // IpAddTextBox
+            this.IpAddTextBox.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.IpAddTextBox.Location = new System.Drawing.Point(95, 24);
+            this.IpAddTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.IpAddTextBox.Name = "IpAddTextBox";
+            this.IpAddTextBox.Size = new System.Drawing.Size(272, 26);
+            this.IpAddTextBox.TabIndex = 1;
+
+            // PortToConnectTextBox
+            this.PortToConnectTextBox.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.PortToConnectTextBox.Location = new System.Drawing.Point(485, 24);
+            this.PortToConnectTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.PortToConnectTextBox.Name = "PortToConnectTextBox";
+            this.PortToConnectTextBox.Size = new System.Drawing.Size(139, 26);
+            this.PortToConnectTextBox.TabIndex = 3;
+
+            // PortOfServerLabel
+            this.PortOfServerLabel.AutoSize = true;
+            this.PortOfServerLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PortOfServerLabel.Location = new System.Drawing.Point(384, 26);
+            this.PortOfServerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PortOfServerLabel.Name = "PortOfServerLabel";
+            this.PortOfServerLabel.Size = new System.Drawing.Size(97, 19);
+            this.PortOfServerLabel.TabIndex = 2;
+            this.PortOfServerLabel.Text = "Server\'s Port";
+
+            // ClickConnectButton
+            this.ClickConnectButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.ClickConnectButton.Location = new System.Drawing.Point(245, 71);
+            this.ClickConnectButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ClickConnectButton.Name = "ClickConnectButton";
+            this.ClickConnectButton.Size = new System.Drawing.Size(172, 30);
+            this.ClickConnectButton.TabIndex = 4;
+            this.ClickConnectButton.Text = "Connect to this server";
+            this.ClickConnectButton.UseVisualStyleBackColor = true;
+            this.ClickConnectButton.Click += new System.EventHandler(this.ClickToConnect);
+
+            // DisplayMsgBoxText
+            this.DisplayMsgBoxText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DisplayMsgBoxText.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DisplayMsgBoxText.Location = new System.Drawing.Point(11, 237);
+            this.DisplayMsgBoxText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.DisplayMsgBoxText.Multiline = true;
+            this.DisplayMsgBoxText.Name = "DisplayMsgBoxText";
+            this.DisplayMsgBoxText.ReadOnly = true;
+            this.DisplayMsgBoxText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DisplayMsgBoxText.Size = new System.Drawing.Size(613, 163);
+            this.DisplayMsgBoxText.TabIndex = 5;
+
+            // SendMsgToServerBoxText
+            this.SendMsgToServerBoxText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SendMsgToServerBoxText.Location = new System.Drawing.Point(11, 138);
+            this.SendMsgToServerBoxText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.SendMsgToServerBoxText.Multiline = true;
+            this.SendMsgToServerBoxText.Name = "SendMsgToServerBoxText";
+            this.SendMsgToServerBoxText.Size = new System.Drawing.Size(356, 25);
+            this.SendMsgToServerBoxText.TabIndex = 6;
+
+            // ClickToSendButton
+            this.ClickToSendButton.Font = new System.Drawing.Font("Calibri", 12F);
+            this.ClickToSendButton.Location = new System.Drawing.Point(375, 137);
+            this.ClickToSendButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ClickToSendButton.Name = "ClickToSendButton";
+            this.ClickToSendButton.Size = new System.Drawing.Size(249, 26);
+            this.ClickToSendButton.TabIndex = 7;
+            this.ClickToSendButton.Text = "Send Message to Server";
+            this.ClickToSendButton.UseVisualStyleBackColor = true;
+            this.ClickToSendButton.Click += new System.EventHandler(this.ClickToSend_Button);
+
+            // CLoseTheFormButton
+            this.CLoseTheFormButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CLoseTheFormButton.Location = new System.Drawing.Point(245, 181);
+            this.CLoseTheFormButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.CLoseTheFormButton.Name = "CLoseTheFormButton";
+            this.CLoseTheFormButton.Size = new System.Drawing.Size(158, 40);
+            this.CLoseTheFormButton.TabIndex = 8;
+            this.CLoseTheFormButton.Text = "Close Connection";
+            this.CLoseTheFormButton.UseVisualStyleBackColor = true;
+            this.CLoseTheFormButton.Click += new System.EventHandler(this.ClickToCloseButton);
+
             // Form1
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(635, 409);
-            this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.buttonSend);
-            this.Controls.Add(this.textBoxSend);
-            this.Controls.Add(this.textBoxDisplay);
-            this.Controls.Add(this.buttonConnect);
-            this.Controls.Add(this.textBoxPort);
-            this.Controls.Add(this.lableServerPort);
-            this.Controls.Add(this.textBoxIP);
-            this.Controls.Add(this.labelServerIP);
+            this.Controls.Add(this.CLoseTheFormButton);
+            this.Controls.Add(this.ClickToSendButton);
+            this.Controls.Add(this.SendMsgToServerBoxText);
+            this.Controls.Add(this.DisplayMsgBoxText);
+            this.Controls.Add(this.ClickConnectButton);
+            this.Controls.Add(this.PortToConnectTextBox);
+            this.Controls.Add(this.PortOfServerLabel);
+            this.Controls.Add(this.IpAddTextBox);
+            this.Controls.Add(this.IpServerAddLable);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Form1";
@@ -160,17 +142,15 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
-
-        private System.Windows.Forms.Label labelServerIP;
-        private System.Windows.Forms.TextBox textBoxIP;
-        private System.Windows.Forms.TextBox textBoxPort;
-        private System.Windows.Forms.Label lableServerPort;
-        private System.Windows.Forms.Button buttonConnect;
-        private System.Windows.Forms.TextBox textBoxDisplay;
-        private System.Windows.Forms.TextBox textBoxSend;
-        private System.Windows.Forms.Button buttonSend;
-        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Label IpServerAddLable;
+        private System.Windows.Forms.TextBox IpAddTextBox;
+        private System.Windows.Forms.TextBox PortToConnectTextBox;
+        private System.Windows.Forms.Label PortOfServerLabel;
+        private System.Windows.Forms.Button ClickConnectButton;
+        private System.Windows.Forms.TextBox DisplayMsgBoxText;
+        private System.Windows.Forms.TextBox SendMsgToServerBoxText;
+        private System.Windows.Forms.Button ClickToSendButton;
+        private System.Windows.Forms.Button CLoseTheFormButton;
     }
 }

@@ -9,3 +9,13 @@ C:\Users\User\Source\Repos\socket-programming\clientSocket\clientSocket\obj\Debu
 C:\Users\User\source\repos\socket-programming\clientSocket\clientSocket\bin\Debug\clientSocket.exe.config
 C:\Users\User\source\repos\socket-programming\clientSocket\clientSocket\bin\Debug\clientSocket.exe
 C:\Users\User\source\repos\socket-programming\clientSocket\clientSocket\bin\Debug\clientSocket.pdb
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\clientSocket\clientSocket\bin\Debug\clientSocket.exe.config
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\clientSocket\clientSocket\bin\Debug\clientSocket.exe
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\clientSocket\clientSocket\bin\Debug\clientSocket.pdb
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\clientSocket\clientSocket\obj\Debug\clientSocket.csproj.AssemblyReference.cache
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\clientSocket\clientSocket\obj\Debug\clientSocket.Form1.resources
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\clientSocket\clientSocket\obj\Debug\clientSocket.Properties.Resources.resources
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\clientSocket\clientSocket\obj\Debug\clientSocket.csproj.GenerateResource.cache
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\clientSocket\clientSocket\obj\Debug\clientSocket.csproj.CoreCompileInputs.cache
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\clientSocket\clientSocket\obj\Debug\clientSocket.exe
+E:\Mostafa\آموزش ها\socket-programming-main\socket-programming-main\clientSocket\clientSocket\obj\Debug\clientSocket.pdb

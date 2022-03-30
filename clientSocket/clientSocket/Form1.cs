@@ -17,17 +17,18 @@ namespace clientSocket
             Control.CheckForIllegalCrossThreadCalls = false;
         }
 
-        private void buttonConnect_Click(object sender, EventArgs e)
+        //the connection between the server and the client starts here by a request from client
+        private void ClickToConnect(object sender, EventArgs e)
         {
-            //A socket object is created
-            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream,ProtocolType.Tcp);
-            clientSocket = socket;
+            //a socketClient object is created. it is the base of socket programming
+            Socket socketClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream,ProtocolType.Tcp);
+            clientSocket = socketClient;
 
-            //Connect to server
+            //connect to server
             try
             {
-                socket.Connect(IPAddress.Parse(textBoxIP.Text), int.Parse(textBoxPort.Text));
-                textBoxDisplay.AppendText("Connected to the server");
+                socketClient.Connect(IPAddress.Parse(IpAddTextBox.Text), int.Parse(PortToConnectTextBox.Text));
+                DisplayMsgBoxText.AppendText("Connected to the server");
             }
             catch (Exception ex)
             {
@@ -35,77 +36,80 @@ namespace clientSocket
                 return;
             }
 
-            //Send and Receive server
-            Thread thread = new Thread(new ParameterizedThreadStart(receiveData));
+            //send to and receive from the server
+            Thread thread = new Thread(new ParameterizedThreadStart(getDataFromServer));
             thread.IsBackground = true;
             thread.Start(clientSocket);
         }
 
-        public void receiveData(object socket)
+        //gets a limited text from server
+        public void getDataFromServer(object socket)
         {
-            var proxSocket = socket as Socket;
+            var SocketValueForProxy = socket as Socket;
             byte[] data = new byte[1024 * 1024];
             while (true)
             {
                 int length = 0;
                 try
                 {
-                    length = proxSocket.Receive(data, 0, data.Length, SocketFlags.None);
+                    length = SocketValueForProxy.Receive(data, 0, data.Length, SocketFlags.None);
                 }
                 catch (Exception)
                 {
-                    //not normal quit
-                    this.appendTextToLog(string.Format("\r\nServer abnormally quits!\n"));
-                    stopConnect();
+                    //server does not normaly quit 
+                    this.AddTextToTheEndOfLogs(string.Format("\r\nServer down suddenly!\n"));
+                    ConnectiongToServerDown();
                     return;
                 }
 
-                //display the receieved data into the textBox
+                //displays the data from server
                 if (length <= 0)
                 {
                     //the client quits
-                    this.appendTextToLog(string.Format("\r\nServer normally quits!\n"));
-                    stopConnect();
+                    this.AddTextToTheEndOfLogs(string.Format("\r\nServer down normally.\n"));
+                    ConnectiongToServerDown();
                     return;
                 }
 
                 //pre-process the received data
-                //The first byte has two types:
-                //1. string; 2. file
+                //The first byte has two types:1. string; 2. file
                 int type = data[0];
                 if (type == 1)
                 {
-                    processingText(data);
+                    TextTypeAnalys(data);
                 }
                 else if(type == 2)
                 {
-                    processingFile(data,length);
+                    FileTransferProc(data,length);
                 }
             }
         }
         
-        public void processingFile(byte[] data, int length)
+        //save the file that the servers sends
+        public void FileTransferProc(byte[] data, int length)
         {
             using (SaveFileDialog sFile = new SaveFileDialog())
             {
-                sFile.Filter = "text file(*.txt)|*.txt|picture(*jpg)|*.jpg|word(*docx)|*docx|all file(*.*)|*.*";
+                sFile.Filter = /*text file(*.txt)|*.txt|picture(*jpg)|*.jpg|...*/"all file(*.*)|*.*";
                 if (sFile.ShowDialog(this) != DialogResult.OK)
                     return;
 
-                byte[] storedData = new byte[length - 1];
-                Buffer.BlockCopy(data, 1, storedData, 0, length - 1);
+                byte[] ByteDataTransfer = new byte[length - 1];
+                Buffer.BlockCopy(data, 1, ByteDataTransfer, 0, length - 1);
 
-                File.WriteAllBytes(sFile.FileName, storedData);
+                File.WriteAllBytes(sFile.FileName, ByteDataTransfer);
             }
         }
 
-        public void processingText(byte[] data)
+        //print the message that client recieves in message box
+        public void TextTypeAnalys(byte[] data)
         {
-            string receivedData = Encoding.Default.GetString(data, 1, data.Length-1);
-            this.appendTextToLog(string.Format("\r\nRecived massage: {0}", receivedData));
+            string DataFromServer = Encoding.Default.GetString(data, 1, data.Length-1);
+            this.AddTextToTheEndOfLogs(string.Format("\r\nRecived massage: {0}", DataFromServer));
         }
 
-        public void stopConnect()
+        //end the connection to the server and close the socket
+        public void ConnectiongToServerDown()
         {
             try
             {
@@ -120,39 +124,43 @@ namespace clientSocket
                 MessageBox.Show(ex.ToString());
             }
         }
-
-        public void appendTextToLog(string text)
+        
+        //add any text to the end of log
+        public void AddTextToTheEndOfLogs(string text)
         {
-            if (textBoxDisplay.InvokeRequired)
+            if (DisplayMsgBoxText.InvokeRequired)
             {
-                textBoxDisplay.Invoke(new Action<string>(s => {
-                    textBoxDisplay.AppendText(s);
+                DisplayMsgBoxText.Invoke(new Action<string>(s => {
+                    DisplayMsgBoxText.AppendText(s);
                 }), text);
             }
             else
             {
-                textBoxDisplay.AppendText(text);
+                DisplayMsgBoxText.AppendText(text);
             }
         }
 
-        private void buttonSend_Click(object sender, EventArgs e)
+        //send message function and show in display message box
+        private void ClickToSend_Button(object sender, EventArgs e)
         {
             if(clientSocket.Connected)
             {
-                byte[] data = Encoding.Default.GetBytes(textBoxSend.Text);
-                textBoxDisplay.AppendText(string.Format("\r\nMessage Sent: {0}", textBoxSend.Text));
+                byte[] data = Encoding.Default.GetBytes(SendMsgToServerBoxText.Text);
+                DisplayMsgBoxText.AppendText(string.Format("\r\nMessage Sent: {0}", SendMsgToServerBoxText.Text));
                 clientSocket.Send(data, 0, data.Length, SocketFlags.None);
             }
         }
-
+        
+        //function to close the main form
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            stopConnect();
+            ConnectiongToServerDown();
         }
-
-        private void buttonClose_Click(object sender, EventArgs e)
+        
+        //function to close the connection to server
+        private void ClickToCloseButton(object sender, EventArgs e)
         {
-            stopConnect();
+            ConnectiongToServerDown();
         }
     }
 }
